@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  description: MyText
+  ville: MyString
+  quartier: MyString
+  duree_contrat: MyString
+  status_emmenagement: false
+  salaire: 1
+  disponibilite: MyString
+  jour_travail: MyString
+  heure_travail_debut: MyString
+  heure_travail_fin: MyString
+
+two:
+  title: MyString
+  description: MyText
+  ville: MyString
+  quartier: MyString
+  duree_contrat: MyString
+  status_emmenagement: false
+  salaire: 1
+  disponibilite: MyString
+  jour_travail: MyString
+  heure_travail_debut: MyString
+  heure_travail_fin: MyString

@@ -1,0 +1,33 @@
+	<header>
+		<div class="navbar navbar-fixed-top">
+			<div class="container">
+				
+				<%= link_to root_path, class: "navbar-brand" do  %>
+					<img src="<%= asset_path 'nannya-logo.png' %>" alt="" />
+				<% end %>
+
+				<div class="nav-collapse  navbar-responsive-collapse">
+					<ul class="nav navbar-nav">
+						<li class="<%= active_class root_path %>">
+							<%= link_to "Accueil", root_path %>				
+						</li>
+						<li class="<%= active_class contact_path %>"><%= link_to "Contact", contact_path %>	</li>
+						
+						
+					</ul>
+				</div><!-- End nav-collapse -->
+	
+				<div class="navbar-right">
+					
+						<p class="contact-top hidden-xs hidden-sm">  Appeler : 694-840-049 ou </p>
+						<%= link_to raw("<strong>Je suis Employeur </strong>"), new_job_proposition_path,
+						 class: "btn btn-red navbar-btn hidden-xs"  %>
+						<p class="contact-top hidden-xs hidden-sm">|</p>
+						<%= link_to raw("<strong>Je suis Candidat </strong>"),	 new_candidate_request_path,
+						 class: "btn btn-red navbar-btn hidden-xs" %>
+
+				</div>
+			</div><!-- End container -->
+		</div><!-- End navbar -->
+	</header>
+	<!-- End header -->

@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  cni_numero: MyString
+  cni_delivrance: MyString
+  cni_place: MyString
+  cni_scan: MyString
+  contact_nom: MyString
+  contact_adresse: MyString
+  contact_phone: MyString
+
+two:
+  cni_numero: MyString
+  cni_delivrance: MyString
+  cni_place: MyString
+  cni_scan: MyString
+  contact_nom: MyString
+  contact_adresse: MyString
+  contact_phone: MyString

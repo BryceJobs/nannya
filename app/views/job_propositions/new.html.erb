@@ -1,0 +1,180 @@
+<section id="page-head">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">		
+				<h2>Pour Employeur</h2>
+				<p>
+				Vous faciliter la vie lors de vos recherches d'employes (menageres / babysitters) pour votre domicile est notre raison d'etre, alors restez confiant car nous ferons le necessaire pour votre satisfaction.
+			</div>
+		</div>
+	</div>	
+</section>
+
+<section class="lightgray-bg-no-margin">
+	<div class="container">
+		<div class="row text-center">
+			<div class="col-sm-4">
+	          <span class="fa-stack fa-3x">
+	          	<i class="fa fa-circle fa-stack-2x"></i>
+	          	<strong class="fa-stack-1x  text-white">1</strong>
+	          </span>
+	          <p>Indiquez nous votre besoin particulier au travers de  notre formulaire ci dessous. ou appelez nous au 694840049</p>
+			</div><!-- /.col-sm-4 -->
+
+			<hr class="visible-xs">
+
+			<div class="col-sm-4">
+	          <span class="fa-stack fa-3x">
+	          	<i class="fa fa-circle fa-stack-2x"></i>
+	          	<strong class="fa-stack-1x  text-white">2</strong>
+	          </span>
+	          <p>Nous vous rappelerons au plus tot(generalement sous 48h) afin de comfirmer votre besoin et vous faire des propositions.</p>
+			</div>
+
+			<hr class="visible-xs">
+
+			<div class="col-sm-4">
+	          <span class="fa-stack fa-3x">
+	          	<i class="fa fa-circle fa-stack-2x"></i>
+	          	<strong class="fa-stack-1x  text-white">3</strong>
+	          </span>
+	          <p>Une fois que vous etes satisfait par l'un des profils proposes, nous mettons a votre disposition votre employe dans de bref delais.</p>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- End page header -->
+
+
+
+<section id="top" class="contain clearfix">
+	<div class="container">
+		<div class="row">
+			<br>
+			<br>
+			<div class="well col-sm-8 col-sm-offset-2">
+
+
+				<h4 class="heading"><span>Decrivez votre offre d'emplois</span><span class="left"></span></h4>
+
+				<%= form_for @job do |f| -%>
+				  <fieldset>
+				  	  <legend>Vos Informations Personelles</legend>
+				  	  <div class="form-group">
+					  	<%= f.label :nom, "Nom Complet" %>
+					  	<%= f.text_field :nom,  required: 'required', class: "form-control" %>
+					  </div>
+
+					  <div class="form-group">
+					  	<div class="row">
+					  		<div class="col-sm-6">
+					  			<%= f.label :telephone, "Telephone" %>
+					  			<%= f.telephone_field :telephone, class: "form-control" ,  required: 'required' %>
+					  		</div>
+					  		<div class="col-sm-6">
+					  			<%= f.label :email, "Email" %>
+					  			<%= f.email_field :email, class: "form-control" %>
+					  		</div>
+					  	</div>
+					  </div>
+				  </fieldset>
+				  <br><br>
+				  <fieldset>
+				  	  <legend>Details de l'offre</legend>
+					  <div class="form-group">
+					  	<%= f.label :title, "Titre" %>
+					  	<%= f.text_field :title, class: "form-control",  required: 'required' %>
+					  </div>
+					  <div class="form-group">
+					  	<%= f.label :description, "Description" %>
+					  	<%= f.text_area :description,  rows: 6, class: "form-control" %>
+					  </div>
+
+					  <div class="form-group">
+					  	<div class="row">
+					  		<div class="col-sm-6">
+					  			<%= f.label :ville, "Ville" %>
+					  			<!-- <%= f.text_field :ville, class: "form-control" %> -->
+							  	<%= f.select :ville, JobProposition.ville, {}, {class: "form-control" } %>
+					  		</div>
+					  		<div class="col-sm-6">
+					  			<%= f.label :quartier, "Quartier" %>
+					  			<%= f.text_field :quartier, class: "form-control",  required: 'required' %>
+					  		</div>
+					  	</div>
+					  </div>
+
+					  <div class="form-group">
+					  	<div class="row">
+					  		<div class="col-sm-6">
+					  			<%= f.label :duree_contrat, "Type de Job" %>
+					  			<!-- <%= f.text_field :duree_contrat, class: "form-control" %> -->
+					  			<%= f.select :duree_contrat, JobProposition.type, {}, {class: "form-control" } %>
+
+					  		</div>
+					  		<div class="col-sm-6">
+					  			<%= f.label :salaire, "Salaire" %>
+								<!-- 	<%= f.text_field :salaire, class: "form-control" %> -->
+					  			<%= f.select :salaire, JobProposition.salary, {}, {class: "form-control" } %>
+
+					  		</div>
+					  	</div>
+					  </div>
+
+					  <div class="form-group">
+					  	<%= f.label :principale_taches, "Taches" %>
+					  	<%= f.text_area :principale_taches, class: "form-control", rows: 3,  required: 'required' %>
+					  </div>
+					  <div class="form-group">
+					  	<%= f.label :jour_travail, "Jour de travail" %>
+						<!--   	<%= f.text_field :jour_travail, class: "form-control" %> -->
+					  	<%= f.select :jour_travail, JobProposition.jour, {}, {class: "form-control" } %>
+					  </div>
+
+					  <div class="form-group">
+					  	<div class="row">
+						  	<div class="col-lg-12">
+						  		<%= f.label :heure_travail_debut, "Horaire de travail" %>
+						  	</div>
+						  	<div class="col-lg-5 ">
+						  		<div class="input-group">
+								  	<input value="08:00" class="form-control" data-datetimepicker="true" data-options="{"showTodayButton":true,"format":"HH:mm"}" size="22" name="job_proposition[heure_travail_debut]" id="job_proposition_heure_travail_debut" type="text">
+								  	<label class="input-group-addon" for="job_proposition_heure_travail_debut"><i class="fa fa-fw fa-calendar">
+								  	</i></label>
+						  		</div>
+						  	</div>
+						  	<div class="col-lg-2 text-center">
+						  		 - 
+						  	</div>
+						  	<div class="col-lg-5">
+						  		<div class="input-group">
+								  	<input value="18:00" class="form-control" data-datetimepicker="true" data-options="{"showTodayButton":true,"format":"HH:mm"}" size="22" name="job_proposition[heure_travail_fin]" id="job_proposition_heure_travail_fin" type="text">
+								  	<label class="input-group-addon" for="job_proposition_heure_travail_fin"><i class="fa fa-fw fa-calendar">
+								  	</i></label>
+							  	</div>
+						  	</div>
+					  	</div>
+					  </div>
+
+					  <div class="form-group">
+					  	<%= f.label :status_emmenagement, "Desirer vous heberger votre employe chez vous?" %>
+					  	<%= f.check_box :status_emmenagement %>
+					  </div>
+				  </fieldset>
+					  <br>
+					  <div class="clearfix"></div>
+
+					  <%= f.submit "Sauvegarder", :disable_with => 'En cours...', class: 'btn btn-red btn-lg' %>
+
+				<% end -%>
+				
+			</div>
+		</div>
+	</div>
+</section>
+
+<script type="text/javascript">
+	$(function  () {
+		$("#job_proposition_heure_travail_fin").datetimepicker({});
+	});
+</script>

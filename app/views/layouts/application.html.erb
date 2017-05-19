@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>NaNNYa - Trouvez des Menageres et Babysitter Pour Votre Domicile</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" type="image/x-icon" href="<%= asset_path 'favicon.ico' %>">
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+	<%= render :partial => "shared/navigation" %>
+
+	<% if notice || alert %>
+	 <p class="alert alert-info"><%= notice %></p>
+	 <p class="alert alert-warning"><%= alert %></p>
+	<% end -%>
+	<%= yield %>
+
+	<%= render :partial => "shared/footer" %>
+ 
+</body>
+</html>

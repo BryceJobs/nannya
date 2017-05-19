@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  presentation: MyText
+  type_emplois: MyString
+  status_emmenagement: MyString
+  salaire_min: 1
+  experience: false
+  status_matrimonial: MyString
+  nombre_enfants: MyString
+  niveau_scolaire: MyString
+
+two:
+  presentation: MyText
+  type_emplois: MyString
+  status_emmenagement: MyString
+  salaire_min: 1
+  experience: false
+  status_matrimonial: MyString
+  nombre_enfants: MyString
+  niveau_scolaire: MyString

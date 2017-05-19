@@ -1,0 +1,162 @@
+// Place all the styles related to the Pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.jumbotron{
+	position:relative;
+	background: #000 image-url("jumbotron/jumbotron.jpeg") center center;
+	width: 100%;
+	height: 450px;
+	background-size: cover;
+	overflow: hidden;
+	text-align:center;
+	color:#fff !important;
+	font-size:22px;
+	line-height:32px;
+}
+
+/* MARKETING CONTENT
+-------------------------------------------------- */
+
+/* Pad the edges of the mobile views a bit */
+.marketing {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+/* Center align the text within the three columns below the carousel */
+.marketing .col-sm-4 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+.marketing h2 {
+  font-weight: normal;
+}
+.marketing .col-sm-4 p {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+
+/* Featurettes
+------------------------- */
+
+.featurette-divider {
+  margin: 80px 0; /* Space out the Bootstrap <hr> more */
+}
+
+/* Thin out the marketing headings */
+.featurette-heading {
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -1px;
+}
+
+
+.lightgray-bg{
+	float:left;
+	width:100%;
+	padding:40px 0 90px 0;
+	background:#F1F1F1;
+	margin-top: 100px; 
+	h2.heading{
+		background-color: #F1F1F1 !important;
+	}
+}
+
+.lightgray-bg-no-margin{
+  float:left;
+  width:100%;
+  padding:40px 0 90px 0;
+  background:#F1F1F1;
+  h2.heading{
+    background-color: #F1F1F1 !important;
+  }
+}
+
+.feat .featurette-image{
+  padding-top: 50px;
+}
+.text-white{
+  color: white;
+}
+
+i.text-white{
+  color: white !important;
+  padding-right:20px;
+  font-size: 22px;
+
+}
+
+.featurette-image{
+  vertical-align: middle;
+  margin-top: 30px;
+  text-align: center;
+}
+
+
+.featurette{
+  text-align: center;
+
+  .lead{
+    text-align: justify;
+  }
+}
+
+hr{
+  border: 2px solid lightgrey !important;
+}
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+
+@media (min-width: 768px) {
+
+  /* Remove the edge padding needed for mobile */
+  .marketing {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  .featurette-heading {
+    font-size: 40px;
+  }
+}
+
+@media (min-width: 992px) {
+  .featurette-heading {
+    margin-top: 120px;
+  }
+}
+
+
+@media (max-width: 768px) {
+
+  body{
+    margin-top: 90px !important;
+  }
+  .featurette-heading {
+    font-size: 25px;
+  }
+
+  #bottom h4{
+    font-size: 25px !important;
+    line-height: 30px !important;
+  }
+
+ .feat .featurette-image{
+    padding-top: 50px;
+  }
+
+  #page-head{
+  
+    p{
+      font-size: 18px;
+    }
+
+    h2{
+      font-size: 30px;
+    }  
+  }
+}
