@@ -35,7 +35,7 @@ jQuery(document).ready(function() {
 	    $("<option />", {
 	       "selected": "selected",
 	       "value"   : "",
-	       "text"    : "Voir le menu"
+	       "text"    : "Ouvrir le menu"
 	    }).appendTo(".navbar .nav-collapse .nav select"); 
 	 
 	    //Menu items
@@ -45,16 +45,21 @@ jQuery(document).ready(function() {
 	            "value"   : el.attr("href"),
 	            "text"    : el.text()
 	        }).appendTo(".navbar .nav-collapse .nav select");
+
+	        if (el.text() == "Accueil" ) {
+
+			    $("<option />", {
+			            "value"   : '/employeur/nouvelle_offre',
+			            "text"    : 'Je suis Employeur'
+			    	}).appendTo(".navbar .nav-collapse .nav select"); 
+			    $("<option />", {
+			            "value"   : '/candidat/nouvelle_candidature',
+			            "text"    : 'Je suis Candidat'
+			    	}).appendTo(".navbar .nav-collapse .nav select");
+			    
+	        };
 	    });
 
-	    $("<option />", {
-	            "value"   : '/employeur/nouvelle_offre',
-	            "text"    : 'Je suis Employeur'
-	    	}).appendTo(".navbar .nav-collapse .nav select"); 
-	    $("<option />", {
-	            "value"   : '/candidat/nouvelle_candidature',
-	            "text"    : 'Je suis Candidat'
-	    	}).appendTo(".navbar .nav-collapse .nav select");
 
 	   
 	 

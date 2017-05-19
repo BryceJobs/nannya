@@ -27,3 +27,40 @@
 		text-align: justify;
 	}
 }
+
+.call-btn{
+	margin-top: 24px;
+	padding: 6px !important;
+	border-radius: 3px;
+	color: #ffffff;
+	font-size: 15px;
+	font-weight: bold;
+    background-color: #ed5153;
+    border:none;
+    border-bottom:1px solid #e14043;
+}
+
+
+@media (max-width: 768px) {
+  .navbar .nav-collapse .nav select {
+    display: block;
+    clear: both;
+    width: 92%;
+    border: 5px solid #59626c;
+    margin: 0 auto;
+    margin-top: 0;
+    padding: 3px 15px 3px 15px;
+  }
+}
+
+@media screen and (min-width: 375px) and (max-width: 768px){
+	.call-btn{
+		margin-right: 2%;
+	}
+}
+
+@media screen and (max-width: 390px){
+	.copyright{
+		font-size: 12px;
+	}
+}

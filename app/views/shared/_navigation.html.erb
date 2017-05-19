@@ -2,9 +2,12 @@
 		<div class="navbar navbar-fixed-top">
 			<div class="container">
 				
-				<%= link_to root_path, class: "navbar-brand" do  %>
+				<%= link_to root_path, class: "navbar-brand hidden-xs hidden-sm" do  %>
 					<img src="<%= asset_path 'nannya-logo.png' %>" alt="" />
 				<% end %>
+				<img src="<%= asset_path 'nannya-logo.png' %>" alt="" class="navbar-brand visible-sm visible-xs" />
+				
+				<a href="tel:+237694840049" class="call-btn visible-xs pull-right "><i class="fa fa-phone text-white"></i>694-840-049</a>
 
 				<div class="nav-collapse  navbar-responsive-collapse">
 					<ul class="nav navbar-nav">

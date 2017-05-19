@@ -149,6 +149,10 @@ hr{
     padding-top: 50px;
   }
 
+  .featurette .lead{
+    padding: 5px 10px;
+  }
+
   #page-head{
   
     p{
@@ -159,4 +163,18 @@ hr{
       font-size: 30px;
     }  
   }
+
+  .social-wrapper{
+    float:right !important;
+    margin:0 !important;
+    padding:0 !important;
+  }
+
+  .social-wrapper .social-icon{
+    margin-left:2px !important;
+    font-size:14px !important;
+    color:#fff;
+    text-decoration:none;
+  }
+
 }
