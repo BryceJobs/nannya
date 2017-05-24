@@ -1085,7 +1085,7 @@ Heading
 .heading span.left{
 	position: absolute;
 	padding:0;
-	width: 60px;
+	width: 100px;
 	height: 3px;
 	bottom: 0;
 	left: 0;	
@@ -1713,7 +1713,7 @@ Ui to top
 	}
 }
 
-@media (min-width: 768px) and (max-width: 979px) {
+@media (min-width: 770px) and (max-width: 979px) {
 	.navbar .nav-collapse .nav li{
 		display:none;
 	}
@@ -1731,6 +1731,10 @@ Ui to top
 		width:400px;
 		float:left;		
 	}	
+
+	body{
+		margin-top: 50px;
+	}
 	.slider-wrapper{
 		width:113px;
 		height:161px;

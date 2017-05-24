@@ -37,6 +37,8 @@ Rails.application.routes.draw do
     get 'employeur/nouvelle_offre', to: "job_propositions#new", as: 'new_job_proposition'
     post 'employeur/nouvelle_offre/sauvegarder', to: "job_propositions#create", as: 'job_propositions'
     get 'employeur/nouvelle_offre/confirmation', to: "job_propositions#confirm", as: 'job_proposition_confirmation'
+
+    get 'derniere_offres', to: "job_propositions#index", as: "offers"
   # Fin Job Propostion
 
 
