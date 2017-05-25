@@ -127,7 +127,18 @@
 </section>
 
 <section id="bottom">
-	<div class="division">
+	<div class="container-fluid">
+		<div class="row">
 
+			<div class="division1">
+				<p>Vous desirez poster une offre d'emplois</p>
+				<%= link_to "Creer une offre", new_job_proposition_path, class: "btn btn-lg btn-red "  %>
+			</div>
+			<div class="division2">
+				<p>Vous desirez postuler a une offre</p>
+				<%= link_to "Postuler", new_candidate_request_path, class: "btn btn-lg btn-red"  %>
+			</div>
+
+		</div>
 	</div>
 </section>
