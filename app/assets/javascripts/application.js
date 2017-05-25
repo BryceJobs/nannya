@@ -13,19 +13,13 @@
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap-sprockets
-//= require_tree .
 //= require turbolinks
+//= require_tree .
 
 
 jQuery(document).ready(function() {
 
-	$(document).on('page:change', function() {
-		 if (window._gaq != null) {
-		  return _gaq.push(['_trackPageview']);
-		 } else if (window.pageTracker != null) {
-		  return pageTracker._trackPageview();
-		 }
-	});
+
 
 	$('ul li.dropdown').hover(function () {
 	            $(this).find('.dropdown-menu').stop(true, true).delay(150).fadeIn();
