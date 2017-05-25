@@ -46,7 +46,7 @@ jQuery(document).ready(function() {
 	            "text"    : el.text()
 	        }).appendTo(".navbar .nav-collapse .nav select");
 
-	        if (el.text() == "Accueil" ) {
+	        if (el.text() == "Derniere Offres" ) {
 
 			    $("<option />", {
 			            "value"   : '/employeur/nouvelle_offre',
@@ -56,7 +56,7 @@ jQuery(document).ready(function() {
 			            "value"   : '/candidat/nouvelle_candidature',
 			            "text"    : 'Je suis Candidat'
 			    	}).appendTo(".navbar .nav-collapse .nav select");
-			    
+
 	        };
 	    });
 
