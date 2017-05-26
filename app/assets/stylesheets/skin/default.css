@@ -19,6 +19,11 @@ i.fa{
 i.fa-heart{
 	color: #E14043;
 }
+
+i.home-icon-arrow{
+  color: white !important;
+}
+
 /*
 Border color
 ================================================== */
