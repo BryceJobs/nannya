@@ -8,7 +8,7 @@ class JobProposition < ActiveRecord::Base
 	end
 
 	def self.salary
-		%w(30000-45000 45000-60000 60000-75000 75000+)
+		%w(40000-60000 60000-80000 80000-100000 100000+)
 	end
 
 	def self.type
