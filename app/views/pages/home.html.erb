@@ -10,8 +10,8 @@
 				    <!-- <p><a class="btn btn-default btn-lg" role="button" href="#marketing">En Savoir Plus</a></p> -->
 				    <i class="fa fa-arrow-circle-o-down fa-4x home-icon-arrow hidden-xs" aria-hidden="true"></i>
 				    <p class="visible-xs">
-				    	<%= link_to "Je cherche une menagere", new_job_proposition_path, class: "btn btn-red" %>
-				    	<%= link_to "Je suis une menagere", new_candidate_request_path, class: "btn btn-red " %>
+				    	<%= link_to "Je suis Employeur", new_job_proposition_path, class: "btn btn-red" %>
+				    	<%= link_to "Je suis Candidat", new_candidate_request_path, class: "btn btn-red " %>
 				    </p>
 
 				</div>
@@ -130,9 +130,13 @@
 				<div class="col-xs-12 aligncenter">
 					<h4>Vous avez en nous un partenaire de confiance</h4>
 					<p>
-					Nous saurons vous fournir le profil que vous recherchez dans de bref delais alors... 
+					Nous saurons vous apporter une solution a votre probleme dans de bref delais alors... 
 					</p>	
-					<%= link_to "Exprimer votre besoin", new_job_proposition_path, class: "btn btn-lg btn-red hidden-xs"  %>
+					<!-- <%= link_to "Exprimer votre besoin", new_job_proposition_path, class: "btn btn-lg btn-red hidden-xs"  %> -->
+					 <p class="hidden-xs">
+				    	<%= link_to "Je suis Employeur", new_job_proposition_path, class: "btn btn-lg btn-red" %>
+				    	<%= link_to "Je suis Candidat", new_candidate_request_path, class: "btn btn-lg btn-red " %>
+				    </p>
 					<a href="tel:+237694840049" class="btn btn-lg btn-red col-xs-8 col-xs-offset-2 visible-xs "><i class="fa fa-phone text-white"></i>694-840-049</a>
 				</div>
 			</div>
