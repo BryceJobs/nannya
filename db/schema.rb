@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170519171006) do
+ActiveRecord::Schema.define(version: 20170602075729) do
 
   create_table "job_propositions", force: :cascade do |t|
     t.string   "title"
@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(version: 20170519171006) do
     t.string   "quartier"
     t.string   "duree_contrat"
     t.boolean  "status_emmenagement"
-    t.integer  "salaire"
+    t.string   "salaire"
     t.string   "disponibilite"
     t.string   "jour_travail"
     t.time     "heure_travail_debut"

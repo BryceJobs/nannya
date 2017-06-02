@@ -13,113 +13,50 @@
 
 
 <section id="offers">
+  
+	
 
 	<div class="container">
 		<div class="row">
 			<div class="col-xs-10 col-xs-offset-1">
 
-				<div class="panel panel-default offer">
-					<div class="panel-heading">
-						publie depuis 3 days <span class="pull-right">par Bryce Jobs</span>
-					</div>
-					<div class="panel-body">
-						<h5 class="heading">Recherche d'une nounou a ndogbong<span class="left"></span></h5>
-						<p>
-							Per ne quot albucius tacimates, eam ei dico reformidans delicatissimi. No animal vivendo deseruisse vel, nec vero dicunt regione ne, ut vis quodsi probatus incorrupte. Eam quaeque mediocrem abhorreant no, vix in postea epicurei. His accusamus constituam te, eu vix inimicus deseruisse vituperatoribus. Ex vim diam omnesque torquatos, per ex mundi facilis.
-						</p>	
-						<hr>
-						<div class="table-responsive">
-							<table class="table table-bordered">
-								<tr>
-									<td><strong>Taches : </strong></td>
-									<td colspan="5">
-										<span class="badge ">lessive</span>
-										<span class="badge ">vaisselle</span>
-										<span class="badge ">Nettoyage de la maison</span>
-										<span class="badge ">prise en charge des enfants</span>
-									</td>
-								</tr>
-								<tr>
-									<td><strong>Salaire :</strong></td>
-									<td>30000-45000</td>
-									<td><strong>Ville :</strong></td>
-									<td>Douala</td>
-									<td><strong>Quartier :</strong></td>
-									<td>Ndogbong</td>
-								</tr>
-							</table>
+				<% @jobs.reverse.each do |job| %>
+
+					<div class="panel panel-default offer">
+						<div class="panel-heading">
+							publie <%= time_ago_in_words job.created_at %> <span class="pull-right">par <%= job.nom %></span>
+						</div>
+						<div class="panel-body">
+							<h5 class="heading"><%= job.title %><span class="left"></span></h5>
+							<p>
+								<%= job.description %>
+							</p>	
+							<hr>
+							<div class="table-responsive">
+								<table class="table table-bordered">
+									<tr>
+										<td><strong>Taches : </strong></td>
+										<td colspan="5">
+											<% job.principale_taches.split(',').each do |tache|  %>
+												<span class="badge "><%= tache  %></span>
+											<% end -%>
+										</td>
+									</tr>
+									<tr>
+										<td><strong>Salaire :</strong></td>
+										<td><%= job.salaire %></td>
+										<td><strong>Ville :</strong></td>
+										<td><%= job.ville %></td>
+										<td><strong>Quartier :</strong></td>
+										<td><%= job.quartier %></td>
+									</tr>
+								</table>
+							</div>
 						</div>
 					</div>
-				</div>
 
+				<% end -%>
 
-				<div class="panel panel-default offer">
-					<div class="panel-heading">
-						publie depuis 3 days <span class="pull-right">par Bryce Jobs</span>
-					</div>
-					<div class="panel-body">
-						<h5 class="heading">Recherche d'une nounou a ndogbong<span class="left"></span></h5>
-						<p>
-							Per ne quot albucius tacimates, eam ei dico reformidans delicatissimi. No animal vivendo deseruisse vel, nec vero dicunt regione ne, ut vis quodsi probatus incorrupte. Eam quaeque mediocrem abhorreant no, vix in postea epicurei. His accusamus constituam te, eu vix inimicus deseruisse vituperatoribus. Ex vim diam omnesque torquatos, per ex mundi facilis.
-						</p>	
-						<hr>
-						<div class="table-responsive">
-							<table class="table table-bordered">
-								<tr>
-									<td><strong>Taches : </strong></td>
-									<td colspan="5">
-										<span class="badge ">lessive</span>
-										<span class="badge ">vaisselle</span>
-										<span class="badge ">Nettoyage de la maison</span>
-										<span class="badge ">prise en charge des enfants</span>
-									</td>
-								</tr>
-								<tr>
-									<td><strong>Salaire :</strong></td>
-									<td>30000-45000</td>
-									<td><strong>Ville :</strong></td>
-									<td>Douala</td>
-									<td><strong>Quartier :</strong></td>
-									<td>Ndogbong</td>
-								</tr>
-							</table>
-						</div>
-					</div>
-				</div>
-
-				<div class="panel panel-default offer">
-					<div class="panel-heading">
-						publie depuis 3 days <span class="pull-right">par Bryce Jobs</span>
-					</div>
-					<div class="panel-body">
-						<h5 class="heading">Recherche d'une nounou a ndogbong<span class="left"></span></h5>
-						<p>
-							Per ne quot albucius tacimates, eam ei dico reformidans delicatissimi. No animal vivendo deseruisse vel, nec vero dicunt regione ne, ut vis quodsi probatus incorrupte. Eam quaeque mediocrem abhorreant no, vix in postea epicurei. His accusamus constituam te, eu vix inimicus deseruisse vituperatoribus. Ex vim diam omnesque torquatos, per ex mundi facilis.
-						</p>	
-						<hr>
-						<div class="table-responsive">
-							<table class="table table-bordered">
-								<tr>
-									<td><strong>Taches : </strong></td>
-									<td colspan="5">
-										<span class="badge ">lessive</span>
-										<span class="badge ">vaisselle</span>
-										<span class="badge ">Nettoyage de la maison</span>
-										<span class="badge ">prise en charge des enfants</span>
-									</td>
-								</tr>
-								<tr>
-									<td><strong>Salaire :</strong></td>
-									<td>30000-45000</td>
-									<td><strong>Ville :</strong></td>
-									<td>Douala</td>
-									<td><strong>Quartier :</strong></td>
-									<td>Ndogbong</td>
-								</tr>
-							</table>
-						</div>
-					</div>
-				</div>
 
 			</div>
 		</div>
