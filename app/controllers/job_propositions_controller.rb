@@ -1,6 +1,6 @@
 class JobPropositionsController < ApplicationController
   def index
-     @jobs = JobProposition.last(0)
+     @jobs = JobProposition.last(5)
   end
 
   def new
