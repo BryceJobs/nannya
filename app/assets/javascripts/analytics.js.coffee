@@ -1,3 +1,5 @@
+###
+
 class @GoogleAnalytics
 
   @load: ->
@@ -38,6 +40,10 @@ class @GoogleAnalytics
 
   @analyticsId: ->
     # your google analytics ID(s) here...
-    'UA-56791222-2'
+    'UA-56791222-3'
 
 GoogleAnalytics.load()
+
+
+
+###
