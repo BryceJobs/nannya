@@ -1,6 +1,7 @@
 class RequeteGeneralesController < ApplicationController
    def new
   	@request = RequeteGenerale.new
+    @meta_description = "Nous disposons de menageres et de nounous formees, qualifiees et experimentees alors appellez nous au 683867665 pour un service rapide"
   end
 
   def create
@@ -17,6 +18,7 @@ class RequeteGeneralesController < ApplicationController
   def confirm
     if session[:previous_path_valid]
       session[:previous_path_valid] = false
+      @meta_description = "Nous disposons de menageres et de nounous formees, qualifiees et experimentees. Nous reviendrons vers vous dans de bref delais"
       render 'confirm'   
     else
       redirect_to contact_path

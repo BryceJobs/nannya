@@ -1,6 +1,7 @@
 class RequeteCandidatsController < ApplicationController
   def new
   	@request = RequeteCandidat.new
+     @meta_description = "Vous etes une menagere ou une nounou a la recherche d'un boulot a Yaounde / Douala? Rejoignez notre grande famille et trouvez des opportunitees. call:683867665"
   end
 
   def create
@@ -16,6 +17,7 @@ class RequeteCandidatsController < ApplicationController
   def confirm
      if session[:previous_path_valid]
       session[:previous_path_valid] = false
+      @meta_description = "Nous avons constamment besoins des profils comme le votre, alors restez confiant, Nous reviendrons vers vous dans de bref delais"
       render 'confirm'   
     else
       redirect_to new_candidate_request_path
